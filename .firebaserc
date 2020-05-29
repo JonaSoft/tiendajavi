@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechats-941e2": {
+      "hosting": {
+        "tiendajavi": [
+          "firechats-941e2"
+        ]
+      }
+    }
+  }
+}

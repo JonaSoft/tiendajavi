@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row mt-2 p-auto" >
+        <!--<h2 class="text-center text-white">Hola, en que te te puedo ayudar? </h2>-->
+        <div class="container col-md-12 d-flex justify-content-lg-end" *ngIf ="_cs.usuario.uid">
+            <div class="row">
+                <button type="button" class="btn btn-danger"
+                (click)="_cs.logout()"> Cerrar Sesión</button>
+            </div>
+            
+        </div>
+        <br>
+        <div class="container col-md-12 d-flex justify-content-center">
+            
+           <app-login  *ngIf ="!_cs.usuario.uid"></app-login>
+           
+            
+        
+                
+        </div>
+         <!--<div class="container col-md-8 d-flex justify-content-center p-auto ">
+           <div class="contenedorchat m-2"style="padding:3px;">
+                    
+                
+                <div class="col-md-12  text-center">
+                    <span class="titulousuarios text-white">Hola, en que te puedo servir?</span> 
+                </div>
+                <br>
+                <div class="container-fluid chat-window" style="background:rgb(243, 233, 139); color: black;border-radius:5px 5px 5px 5px;">
+                    <div class="main-container app-mensajes" id="app-mensajes">
+                        <div *ngFor="let chat of _cs.chats">
+                        
+                            <div [ngClass]="{'text-left ':usuarionombre != chat.nombre,
+
+                                            'text-right ':usuarionombre == chat.nombre}">
+                                <span class="badge" style="font-size:13px;"[ngClass]="{'badge-primary':usuarionombre == chat.nombre,
+                                                'badge-success':usuarionombre != chat.nombre }">
+                                    {{chat.nombre}}
+                                </span>
+                                
+                                <div >
+                                    <span style="font-size:11px;color:gray">
+                                        [{{chat.fecha | date:'medium'}}] dice:
+                                    </span>
+                                </div>
+                                {{chat.mensaje}}
+                                <a [href]="chat.url" target= "_blank" class="card-title">
+                                    <img [src]="chat.url" class="card-img-top"  style="width:50%; height:auto;">    
+                                </a>
+                            
+                            </div>
+                            <br>
+                        </div>
+                        
+                    </div>
+            
+                </div>
+            
+                <div appNgDropFiles [archivos]="archivos"
+                (mouseSobre)="pruebaSobreInput($event)" [ngClass]="{'file-over': estaSobreInput }" class=" container-fluid send-window " style="margin-top:15px;">
+                    
+                    <input id="btn-input" type="text" class="form-control" name="mensaje" [(ngModel)]="mensaje" (KeyUp.enter)="enviarMensaje()" placeholder="Send message..." />
+                
+                
+                </div>
+                <div class="container text-right m-3">
+            
+                </div>
+            
+            
+            </div>
+        </div>-->
+    </div>
+</div>
+

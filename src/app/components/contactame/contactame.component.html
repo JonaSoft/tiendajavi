@@ -1,29 +1,26 @@
 <div class="container">
-    <div class="row mt-2 p-auto" >
+    <div class="row mt-2 p-auto">
         <!--<h2 class="text-center text-white">Hola, en que te te puedo ayudar? </h2>-->
-        <div class="container col-md-12 d-flex justify-content-lg-end" *ngIf ="_cs.usuario.uid">
-            <div class="row">
-                <button type="button" class="btn btn-danger"
-                (click)="_cs.logout()"> Cerrar Sesión</button>
-            </div>
-            
-        </div>
-        <br>
-        <div class="container col-md-12 d-flex justify-content-center">
-            
-           <app-login  *ngIf ="!_cs.usuario.uid"></app-login>
-           
-            
         
-                
-        </div>
-         <!--<div class="container col-md-8 d-flex justify-content-center p-auto ">
-           <div class="contenedorchat m-2"style="padding:3px;">
+        <br>
+        <div class="container col-lg-12 d-flex justify-content-center p-auto " >
+            
+           <app-login  *ngIf ="!_cs.usuario.uid" style="margin-top:10%;"></app-login>
+                       
+        
+           <div *ngIf ="_cs.usuario.uid"class="contenedorchat m-2"style="padding:3px;">
                     
-                
+            
                 <div class="col-md-12  text-center">
-                    <span class="titulousuarios text-white">Hola, en que te puedo servir?</span> 
+                    <span *ngIf ="_cs.usuario.uid"  class="titulousuarios text-white mt-2">HOLA !!!; dime en que te puedo servir?</span> 
                 </div>
+                <div class="container col-md-12 d-flex justify-content-lg-end" *ngIf ="_cs.usuario.uid">
+                    <div class="row mt-3">
+                        <button type="button" class="btn btn-danger"
+                        (click)="_cs.logout()"> Cerrar Sesión</button>
+                    </div>
+                    
+                </div>    
                 <br>
                 <div class="container-fluid chat-window" style="background:rgb(243, 233, 139); color: black;border-radius:5px 5px 5px 5px;">
                     <div class="main-container app-mensajes" id="app-mensajes">
@@ -38,7 +35,7 @@
                                 </span>
                                 
                                 <div >
-                                    <span style="font-size:11px;color:gray">
+                                    <span style="font-size:12px;color:gray">
                                         [{{chat.fecha | date:'medium'}}] dice:
                                     </span>
                                 </div>
@@ -55,20 +52,39 @@
             
                 </div>
             
-                <div appNgDropFiles [archivos]="archivos"
-                (mouseSobre)="pruebaSobreInput($event)" [ngClass]="{'file-over': estaSobreInput }" class=" container-fluid send-window " style="margin-top:15px;">
+                <div  *ngIf ="_cs.usuario.uid" appNgDropFiles [archivos]="archivos"
+                      (mouseSobre)="pruebaSobreInput($event)" [ngClass]="{'file-over': estaSobreInput }" class=" container-fluid send-window " style="margin-top:15px;">
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input 
+                                id="btn-input" 
+                                type="text" 
+                                class="form-control ml-2" 
+                                name="mensaje"
+                                [(ngModel)]="mensaje" 
+                                (KeyUp.enter)="enviarMensaje()" 
+                                placeholder="deja tu mensaje..." 
+                                autofocus />
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success"(click)="enviarMensaje()">Enviar</button>
+                        </div>
+                    </div>
                     
-                    <input id="btn-input" type="text" class="form-control" name="mensaje" [(ngModel)]="mensaje" (KeyUp.enter)="enviarMensaje()" placeholder="Send message..." />
+                    
                 
                 
                 </div>
+                
                 <div class="container text-right m-3">
             
                 </div>
+               
             
             
             </div>
-        </div>-->
+        </div>
     </div>
 </div>
 

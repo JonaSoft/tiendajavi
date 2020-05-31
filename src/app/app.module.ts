@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactameComponent } from './components/contactame/contactame.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 import {  FirestochatsService } from "./servicios/firestochats.service";
 import { CargaImagenesService } from './servicios/carga-imagenes.service';
@@ -24,6 +25,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 
 
+//servicios
+import { ProductosService } from './servicios/productos.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +37,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     ContactameComponent,
     NgDropFilesDirective,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,8 @@ import { RegistroComponent } from './components/registro/registro.component';
   ],
   providers: [
     FirestochatsService,
-    CargaImagenesService
+    CargaImagenesService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

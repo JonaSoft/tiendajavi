@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: #595b5d;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #00925a, #74941e);  
-    background: linear-gradient(to right, #00925a, #74941e); */
-    background-image: url('./assets/tienda.jpg');
+    background: #6fcfec;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a5bee, #0e0592);  
+    background: linear-gradient(to right #3a5bee,  #0e0592); 
+    /*background-image: url('./assets/tienda.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     margin: 0;
     padding: 0;
-    width:100%;
-    height:1150px;
+    /*width:100%;
+    height:1450px;*/
     font-family: sans-serif;
   }
 

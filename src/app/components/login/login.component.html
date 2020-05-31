@@ -1,12 +1,33 @@
-<div class="container main-container justify-content-center">
-    <p class="text-white text-center">Elige tu cuenta favorita </p> 
-    <button type="button" class="btn btn-primary"
+
+<div class="container main-container justify-content-md-start bg-white"  >
+    
+    <button type="button" class="btn btn-outline-warning btn-block text-lg-left text-dark"
         (click)="ingresar('google')">
-        Google
+        <img src="../../../assets/g.png" alt="" 
+        title="Habilita tu cuenta en Google  para que podamos charlar"
+        width="35"
+        height="35"
+        class="rounded-circle"
+        >
+       Continuar con Google
     </button>
-    <button type="button" class="btn btn-info ml-5"
-    (click)="ingresar('twitter')">
-        Twitter
+
+    <button type="button" class="btn btn-outline-primary btn-block mt-2 text-lg-left text-dark"
+        (click)="ingresar('google')">
+        <img src="../../../assets/facebook.png" alt="" 
+            title="Habilita tu cuenta en Facebook  para que podamos charlar"
+            width="35"
+            height="35"
+            class="rounded-circle"
+        >
+        Continuar con Facebook
     </button>
    
+    
+    <!--<button type="button" class="btn btn-info ml-5"
+    (click)="ingresar('facebook')">
+        Facebook
+    </button>-->
+   
+
 </div>

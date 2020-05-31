@@ -35,27 +35,45 @@ export class FirestochatsService {
                 this.afAuth.authState.subscribe( user =>{
                   console.log('Estado de Usuario', user);
                   if(!user){
+                    console.log('lo bota');
                     return
                   }
+                  console.log('guardo el usuario');
                   this.usuario.nombre = user.displayName;
+                  localStorage.setItem('email',this.usuario.nombre)
                   this.usuario.uid = user.uid;
+                  localStorage.setItem('uid',this.usuario.uid)
                 })
+
 
                 this.itemsUsers1=afs1.collection<User>('users');
                 this.users1=this.itemsUsers1.valueChanges();
+                //location.reload(true);
 
               }
+
               login(proveedor:string) {
-                this.auth.signInWithPopup(new auth.GoogleAuthProvider());
+                if (proveedor==='google'){
+                  this.auth.signInWithPopup(new auth.GoogleAuthProvider());
+                  //location.reload();
+                } else {
+                  
+                    this.auth.signInWithPopup(new auth.FacebookAuthProvider());
+                  
+                }
               }
+              
               logout() {
+                localStorage.removeItem('token');
+                localStorage.removeItem('email');
+                localStorage.removeItem('uid');
                 this.usuario={}
                 this.auth.signOut();
               }
 
   cargarMensajes(){
     this.itemsCollection = this.afs.collection<Mensaje>('chats', ref => ref.orderBy('fecha','desc')
-                                                                           .limit(15) );
+                                                                           .limit(8) );
 
     //retorna cambios en colecciones
     return this.itemsCollection.valueChanges().pipe(

@@ -10,9 +10,11 @@ export class LoginComponent{
 
   constructor(public  _cs: FirestochatsService) { }
 
- ingresar(proveedor:string){
-   console.log(proveedor)
-   this._cs.login(proveedor)
- }
+      ingresar(proveedor:string){
+        console.log(proveedor)
+        this._cs.login(proveedor)
+      }
+    
 
-}
+  }
+  //location.reload();

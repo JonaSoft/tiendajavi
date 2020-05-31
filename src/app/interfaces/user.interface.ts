@@ -4,5 +4,4 @@ export interface User {
     fecha?:number;
     uid?: string;
     url?:string
-
  }

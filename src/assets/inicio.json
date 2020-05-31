@@ -1,0 +1,75 @@
+[
+   {
+      "nombre":"Accesorios",
+      "img":"assets/img/accesorios.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Audífonos",
+      "img":"assets/img/audifonos.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Carcasas",
+      "img":"assets/img/carcasas.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Celulares",
+      "img":"assets/img/celulares.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Control Remoto",
+      "img":"assets/img/controlremoto.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Higiene",
+      "img":"assets/img/higiene.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Juegos de mesa",
+      "img":"assets/img/juegosdemesa.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+    {
+       "nombre":"Mascarilla",
+       "img":"assets/img/mascarilla.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "descripcion":"",
+       "entregadomicilio":true
+    },
+   
+    {
+       "nombre":"Mouses",
+       "img":"assets/img/mouses.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Teclados",
+       "img":"assets/img/teclados.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    }
+   ]
+ 

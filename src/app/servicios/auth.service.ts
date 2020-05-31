@@ -21,22 +21,13 @@ export class AuthService {
 
   userToken:string;
   usuarioEmail:string
-
-  //crear
-  //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
-  //loguearse
-  //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
+  
 
   constructor( private http: HttpClient) {
     this.leerToken()
    }
 
-  logout(){
-    localStorage.removeItem('token');
-    localStorage.removeItem('email')
-  }
-
-
+  
   login(usuario:UsuarioModel){
 
     const authData ={
@@ -68,8 +59,6 @@ export class AuthService {
       authData
     ).pipe(
       map( res=>{
-        //this.guardarToken( res['idToken']);
-        //this.guardarEmail(res['email']);
         return res
       })
     )
@@ -112,7 +101,6 @@ export class AuthService {
   //LEER USUARIO
   leerEmail(){
     if ( localStorage.getItem('email')){
-          //console.log(localStorage.getItem('email'))
           return this.usuarioEmail = localStorage.getItem('email');
     } else {
           return this.usuarioEmail = "";

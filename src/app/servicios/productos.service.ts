@@ -19,4 +19,9 @@ export class ProductosService {
     return this.http.get('assets/inicio.json')
     
    }
+   getProducto(articulo:any){
+
+    return this.http.get(`assets/${articulo}.json`)
+
+   }
 }

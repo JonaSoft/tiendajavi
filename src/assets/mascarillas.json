@@ -1,12 +1,5 @@
 [
-    {
-       "nombre":"Mascarilla",
-       "img":"assets/img/mascarillas/mascarilla.jpg",
-       "preciou":8.00,
-       "precio por mayor":6.00,
-       "descripcion":"",
-       "entregadomicilio":true
-    },
+    
     {
        "nombre":"Modelo 1",
        "img":"assets/img/mascarillas/1.jpg",
@@ -17,13 +10,6 @@
     {
        "nombre":"Modelo 2",
        "img":"assets/img/mascarillas/2.jpg",
-       "preciou":8.00,
-       "precio por mayor":6.00,
-       "entregadomicilio":true
-    },
-    {
-       "nombre":"Modelo3",
-       "img":"assets/img/mascarillas/3.jpg",
        "preciou":8.00,
        "precio por mayor":6.00,
        "entregadomicilio":true
@@ -127,22 +113,15 @@
        "entregadomicilio":true
     },
     {
-       "nombre":"Modelo 18",
-       "img":"assets/img/mascarillas/18.jpg",
-       "preciou":8.00,
-       "precio por mayor":6.00,
-       "entregadomicilio":true
-    },
-    {
        "nombre":"Modelo 19",
-       "img":"assets/img/mascarillas/1.jpg",
+       "img":"assets/img/mascarillas/19.jpg",
        "preciou":8.00,
        "precio por mayor":6.00,
        "entregadomicilio":true
     },
     {
        "nombre":"Modelo 20",
-       "img":"assets/img/mascarillas/1.jpg",
+       "img":"assets/img/mascarillas/20.jpg",
        "preciou":8.00,
        "precio por mayor":6.00,
        "entregadomicilio":true
@@ -171,13 +150,6 @@
     {
        "nombre":"Modelo 24",
        "img":"assets/img/mascarillas/24.jpg",
-       "preciou":8.00,
-       "precio por mayor":6.00,
-       "entregadomicilio":true
-    },
-    {
-       "nombre":"Modelo 25",
-       "img":"assets/img/mascarillas/25.jpg",
        "preciou":8.00,
        "precio por mayor":6.00,
        "entregadomicilio":true

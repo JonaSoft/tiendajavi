@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService} from '../../servicios/productos.service';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -10,18 +11,20 @@ import { ProductosService} from '../../servicios/productos.service';
 export class InicioComponent  {
   public inicioproductos:any=[];
 
-  constructor( private _productosServices: ProductosService) { 
+  constructor( private _productosServices: ProductosService,
+                private _router:Router) { 
     this.inicioproductos = this._productosServices.getProductos()
     .subscribe(res=>{
       console.log(res)
       this.inicioproductos=res
      
     })
-
-    
-      
   }
-
+  verProducto(idx:any){
+    console.log(idx)
+    idx=idx.toLowerCase()
+    this._router.navigate(['productos', idx])
+  }
   
   
 

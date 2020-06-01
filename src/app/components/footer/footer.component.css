@@ -1,0 +1,92 @@
+body{
+    width: 100%;
+   }
+   .slider{
+     background-size:cover;
+     background-position: center;
+     background-color:#0B3861;
+     width: 100%;
+   
+   }
+   .columna{
+     border:1px #313030 solid;
+   }
+   .medida{
+     height: 150px;
+     max-width: 200px;
+     min-width: 30px;
+     margin-top: 5px;
+   }
+   .medida1{
+     height: 150px;
+     max-width: 200px;
+     min-width: 50px;
+     margin-top: 5px;
+   }
+   .medida2{
+     height: 150px;
+     max-width: 200px;
+     min-width: 50px;
+     margin-top: 5px;
+   }
+   p{
+     font-size:0.9rem;
+   }
+   h5{
+      text-align: center;
+      color:rgb(22, 116, 223)
+   }
+   
+   .footerfinal{
+      background-color: #414040;
+      width: 100%;
+      height:auto;
+       padding-bottom: 0px;
+      margin-bottom: 0px;
+      order:3;
+      opacity:0.75;
+   }
+   
+   #piePagina{
+      background-color: #414040;
+      width: 100%;
+      
+      height: auto;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      color: white
+   
+   }
+   
+   p{
+      color:white;
+   
+   }
+   /* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.9s;
+    animation-duration: 0.9s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}

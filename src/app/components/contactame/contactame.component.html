@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" style="min-height:350px;">
     <div class="row mt-2 p-auto">
         <!--<h2 class="text-center text-white">Hola, en que te te puedo ayudar? </h2>-->
         
         <br>
         <div class="container col-lg-12 d-flex justify-content-center p-auto " >
             
-           <app-login  *ngIf ="!_cs.usuario.uid" style="margin-top:10%;"></app-login>
+           <app-login  *ngIf ="!_cs.usuario.uid" ></app-login>
                        
         
            <div *ngIf ="_cs.usuario.uid"class="contenedorchat m-2"style="padding:3px;">

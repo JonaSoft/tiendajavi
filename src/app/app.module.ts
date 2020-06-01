@@ -27,6 +27,9 @@ import { RegistroComponent } from './components/registro/registro.component';
 
 //servicios
 import { ProductosService } from './servicios/productos.service';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 
@@ -38,7 +41,10 @@ import { ProductosService } from './servicios/productos.service';
     NgDropFilesDirective,
     LoginComponent,
     RegistroComponent,
-    ProductosComponent
+    ProductosComponent,
+    FooterComponent,
+    NavbarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

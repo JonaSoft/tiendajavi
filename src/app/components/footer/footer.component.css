@@ -1,13 +1,6 @@
 body{
     width: 100%;
    }
-   .slider{
-     background-size:cover;
-     background-position: center;
-     background-color:#0B3861;
-     width: 100%;
-   
-   }
    .columna{
      border:1px #313030 solid;
    }
@@ -38,17 +31,17 @@ body{
    }
    
    .footerfinal{
-      background-color: #414040;
+      
       width: 100%;
       height:auto;
-       padding-bottom: 0px;
+      padding-bottom: 0px;
       margin-bottom: 0px;
       order:3;
       opacity:0.75;
    }
    
    #piePagina{
-      background-color: #414040;
+      
       width: 100%;
       
       height: auto;

@@ -24,10 +24,14 @@ body{
    }
    p{
      font-size:0.9rem;
+     font-family: 'Arbutus', cursive;
+     
+
    }
    h5{
       text-align: center;
-      color:rgb(22, 116, 223)
+      color:rgb(26, 27, 27);
+      font-family:'Arbutus', cursive; 
    }
    
    .footerfinal{

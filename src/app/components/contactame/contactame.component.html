@@ -1,6 +1,8 @@
-<div class="container" style="min-height:750px;">
+<div class="container" style="min-height:auto;">
+    <h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">HOLA !!!; dime en que te puedo servir? </h2>
     <div class="row mt-2 p-auto">
         <!--<h2 class="text-center text-white">Hola, en que te te puedo ayudar? </h2>-->
+       
         
         <br>
         <div class="container col-lg-12 d-flex justify-content-center p-auto " *ngIf ="!_cs.usuario.uid" >
@@ -8,75 +10,120 @@
            <app-login  *ngIf ="!_cs.usuario.uid" ></app-login>
         </div> 
 
+        
 
         <div  *ngIf ="_cs.usuario.uid" class="container col-lg-6 d-flex justify-content-center p-auto " >
-            <img src="../../../assets/img/about.jpg" alt="" with="420" height="420"class="img-thumbnail">
-        </div> 
-        
-        
-        <div  *ngIf ="_cs.usuario.uid" class="container col-lg-6 d-flex justify-content-center p-auto " >
-           <div *ngIf ="_cs.usuario.uid"class="contenedorchat m-2"style="padding:3px;">
-                    
-            
-                <div class="col-md-12  text-center">
-                    <span *ngIf ="_cs.usuario.uid"  class="titulousuarios text-white mt-2">HOLA !!!; dime en que te puedo servir?</span> 
-                </div>
-               
-                <br>
-                <div class="container-fluid chat-window" style="background:rgb(183, 216, 231); color: black;border-radius:5px 5px 5px 5px;">
-                    <div class="main-container app-mensajes" id="app-mensajes">
-                        <div *ngFor="let chat of _cs.chats">
-                        
-                            <div [ngClass]="{'text-left ':usuarionombre != chat.nombre,
-
-                                            'text-right ':usuarionombre == chat.nombre}">
-                                <span class="badge" style="font-size:13px;"[ngClass]="{'badge-primary':usuarionombre == chat.nombre,
-                                                'badge-success':usuarionombre != chat.nombre }">
-                                    {{chat.nombre}}
-                                </span>
-                                
-                                <div >
-                                    <span style="font-size:12px;color:gray">
-                                        [{{chat.fecha | date:'medium'}}] dice:
-                                    </span>
-                                </div>
-                                {{chat.mensaje}}
-                                <a [href]="chat.url" target= "_blank" class="card-title">
-                                    <img [src]="chat.url" class="card-img-top"  style="width:50%; height:auto;">    
-                                </a>
-                            
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            
-                <div  *ngIf ="_cs.usuario.uid" appNgDropFiles [archivos]="archivos"
-                      (mouseSobre)="pruebaSobreInput($event)" [ngClass]="{'file-over': estaSobreInput }" class=" container-fluid send-window " style="margin-top:15px;">
-
-                    <div class="row">
-                        <div class="container col-lg-11 d-flex justify-content-center">
-                            <input 
-                                id="btn-input" 
-                                type="text" 
-                                class="form-control " 
-                                name="mensaje"
-                                [(ngModel)]="mensaje" 
-                                (KeyUp.enter)="enviarMensaje()" 
-                                placeholder="Deja tu mensaje..." 
-                                />
+            <div class="row">
+                <div class="container-fluid">
+                    <!--<div class="card" style="width:auto;">
+                        <div class="container-fluid">
+                            <img src="../../../assets/img/about.jpg" class="card-img-top " alt="...">
                         </div>
                         
-                    </div>
-                    <div class="container col-md-12 d-flex justify-content-lg-center mt-3" *ngIf ="_cs.usuario.uid">
-                        <button type="button" class="btn btn-danger btn-block m-2"
-                        (click)="_cs.logout()"> Cerrar Sesión</button><br>
-                        <button class="btn btn-success btn-block m-2"
-                        (click)="enviarMensaje()">Enviar</button>
-                    </div>    
+                        <div class="card-body " style="border: 2px solid black;">
+                          <h5 class="card-title">La Tienda de Javi</h5>
+                          <p>My Avenue s/n. San Miguel Lima-Perú</p>
+                          <p>Email: <a href="#">  myemail@gmail.com </a></p>
+                          <p>Celular : (051)999-999999</p>
+
+                        </div>
+                        
+                        <div class="card-body d-flex justify-content-between"style="background-color: rgb(6, 22, 59);border: 2px solid black;">
+                          <a href="/inicio" class="card-link text-left"> <button class="btn btn-primary">
+                                Ir al Inicio</button>
+                           </a>
+                          <a (click)="_cs.logout()"href="#" class="card-link text-right"> <button class="btn btn-danger">
+                              Cerrar Sesión</button>
+                          </a>
+                        </div>
+                    </div>-->
+                    <div class="card mt-5" style="width: 20rem;">
+                        <img src="../../../assets/img/about.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">La Tienda de Javi</h5>
+                          <p class="card-text contacto">My Avenue s/n. San Miguel Lima-Perú
+                              <span>Email: <a href="#">  myemail@gmail.com </a></span><br>
+                              <span>Celular : (051)999-999999</span>
+                          </p>
+                          <div class="container d-flex justify-content-between"style="">
+                            <a href="/inicio" class="card-link text-left"> <button class="btn btn-primary">
+                                  Ir al Catálogo</button>
+                             </a>
+                            <a (click)="_cs.logout()"href="#" class="card-link text-right"> <button class="btn btn-danger">
+                                Cerrar Sesión</button>
+                            </a>
+                          </div>
+
+                        </div>
+                      </div>
                 </div>
             </div>
+        </div> 
+        
+        <div  *ngIf ="_cs.usuario.uid" class="container col-lg-6 d-flex justify-content-center p-auto " >
+            <div *ngIf ="_cs.usuario.uid"class="contenedorchat m-5"style="padding:3px;">
+                     
+             
+                 <!--<div class="col-md-12  text-center">
+                     <span *ngIf ="_cs.usuario.uid"  class="titulousuarios text-white mt-2">HOLA !!!; dime en que te puedo servir?</span> 
+                 </div>-->
+                
+                 <br>
+                 <div class="container-fluid chat-window" style="background:rgb(183, 216, 231); color: black;border-radius:5px 5px 5px 5px;">
+                     <div class="main-container app-mensajes" id="app-mensajes">
+                         <div *ngFor="let chat of _cs.chats">
+                         
+                             <div [ngClass]="{'text-left ':usuarionombre != chat.nombre,
+ 
+                                             'text-right ':usuarionombre == chat.nombre}">
+                                 <span class="badge" style="font-size:13px;"[ngClass]="{'badge-primary':usuarionombre == chat.nombre,
+                                                 'badge-success':usuarionombre != chat.nombre }">
+                                     {{chat.nombre}}
+                                 </span>
+                                 
+                                 <div >
+                                     <span style="font-size:12px;color:gray">
+                                         [{{chat.fecha | date:'medium'}}] dice:
+                                     </span>
+                                 </div>
+                                 {{chat.mensaje}}
+                                 <a [href]="chat.url" target= "_blank" class="card-title">
+                                     <img [src]="chat.url" class="card-img-top"  style="width:50%; height:auto;">    
+                                 </a>
+                             
+                             </div>
+                             <br>
+                         </div>
+                     </div>
+                 </div>
+             
+                 <div  *ngIf ="_cs.usuario.uid" appNgDropFiles [archivos]="archivos"
+                       (mouseSobre)="pruebaSobreInput($event)" [ngClass]="{'file-over': estaSobreInput }" class=" container send-window " style="margin-top:15px;">
+ 
+                     <div class="row">
+                         <div class="container col-lg-12 d-flex justify-content-center">
+                             <input 
+                                 id="btn-input" 
+                                 type="text" 
+                                 class="form-control m-auto" 
+                                 name="mensaje"
+                                 [(ngModel)]="mensaje" 
+                                 (KeyUp.enter)="enviarMensaje()" 
+                                 placeholder="Escribe luego enter o click ..." 
+                                 />
+                         </div>
+                         <div class="container col-lg-12 d-flex justify-content-end mt-2" *ngIf ="_cs.usuario.uid">
+                            <button class="btn btn-success"
+                            (click)="enviarMensaje()">Enviar mensaje</button>
+                           
+                        </div>    
+                         
+                     </div>
+                     
+                 </div>
+             </div>
         </div>
+       
     </div>
 </div>
 

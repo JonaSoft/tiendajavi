@@ -73,17 +73,22 @@ export class FirestochatsService {
 
   cargarMensajes(){
     this.itemsCollection = this.afs.collection<Mensaje>('chats', ref => ref.orderBy('fecha','desc')
-                                                                           .limit(8) );
+                                                                           .limit(10) );
 
     //retorna cambios en colecciones
     return this.itemsCollection.valueChanges().pipe(
                              map( (mensajes:Mensaje[]) =>{
-                                //console.log(mensajes)
+                                console.log(mensajes)
+                                console.log(localStorage.getItem('email'))
                                 //this.chats=mensajes
                                 this.chats=[];
                                 for ( let mensaje of mensajes){
                                     //adiciona al inicio de la matriz
-                                    this.chats.unshift(mensaje);
+
+                                    if(mensaje.nombre === localStorage.getItem('email') || mensaje.nombre === "jonasoft service"){
+                                      this.chats.unshift(mensaje);
+                                    }
+                                    
                                 }
                                 return this.chats;
                               })

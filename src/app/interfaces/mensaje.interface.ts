@@ -3,5 +3,6 @@ export interface Mensaje {
    mensaje: string;
    fecha?:number;
    uid?: string;
-   url?:string
+   url?:string;
+   correo: string
 }

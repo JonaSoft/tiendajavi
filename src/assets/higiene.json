@@ -1,0 +1,9 @@
+[
+    {
+       "nombre":"Modelo 1",
+       "img":"assets/img/higiene/1.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    }
+]

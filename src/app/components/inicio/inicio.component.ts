@@ -17,12 +17,16 @@ export class InicioComponent  {
     .subscribe(res=>{
       console.log(res)
       this.inicioproductos=res
-     
     })
   }
   verProducto(idx:any){
     console.log(idx)
     idx=idx.toLowerCase()
+    
+    console.log(idx)
+    if (idx==="audífonos"){
+      idx="audifonos"
+    }
     this._router.navigate(['productos', idx])
   }
   

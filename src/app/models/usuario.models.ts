@@ -1,5 +1,5 @@
 export class UsuarioModel {
     email: string;
-    password: string
-    
+    password: string;
+    correo: string
 }

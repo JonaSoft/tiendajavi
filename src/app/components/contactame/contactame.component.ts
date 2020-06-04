@@ -26,9 +26,11 @@ export class ContactameComponent implements OnInit {
 
 //******************************************
 
-  mensaje:string ="";
+  
   public elemento:any;
+  mensaje:string ="";
   public usuarionombre:string="";
+  public correo:string="";
   public chats: Observable<any[]>;
   public mensajes:any[]=[];
   public users: Observable<any[]>;
@@ -100,9 +102,10 @@ export class ContactameComponent implements OnInit {
     if (this.mensaje.length === 0){
       return
     }
-    this.usuarionombre = this._usuario.leerEmail() 
+    this.usuarionombre = this._usuario.leerEmail()
+    this.correo = localStorage.getItem('correo') 
     console.log('es igual q servicio',this.usuarionombre)
-    this._cs.agregarMensajes(this.mensaje,this.usuarionombre)
+    this._cs.agregarMensajes(this.mensaje,this.usuarionombre,this.correo)
       .then(()=>{
         this.mensaje=""
         

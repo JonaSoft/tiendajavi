@@ -39,6 +39,9 @@ export class FirestochatsService {
                     return
                   }
                   console.log('guardo el usuario');
+                  this.usuario.correo = user.email;
+                  //console.log(this.usuario.correo)
+                  localStorage.setItem('correo',this.usuario.correo)
                   this.usuario.nombre = user.displayName;
                   localStorage.setItem('email',this.usuario.nombre)
                   this.usuario.uid = user.uid;
@@ -64,6 +67,7 @@ export class FirestochatsService {
               }
               
               logout() {
+                localStorage.removeItem('correo');
                 localStorage.removeItem('token');
                 localStorage.removeItem('email');
                 localStorage.removeItem('uid');
@@ -112,13 +116,14 @@ export class FirestochatsService {
      
        
   }
-  agregarMensajes(texto:string,usuarionombre:string){
+  agregarMensajes(texto:string,usuarionombre:string, correo:string){
       let datamensaje: Mensaje = {
-        nombre:usuarionombre,
-        url:'',
         mensaje:texto,
+        nombre:usuarionombre,
+        correo:correo,
+        url:'',
         fecha:new Date().getTime(),
-
+       
       }
 
       return this.itemsCollection.add(datamensaje);

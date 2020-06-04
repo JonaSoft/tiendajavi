@@ -1,0 +1,51 @@
+[
+    {
+       "nombre":"Modelo 1",
+       "img":"assets/img/juegos de mesa/1.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Modelo 2",
+       "img":"assets/img/juegos de mesa/2.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Modelo 3",
+       "img":"assets/img/juegos de mesa/3.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Modelo 4",
+       "img":"assets/img/juegos de mesa/4.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Modelo 5",
+       "img":"assets/img/juegos de mesa/5.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+        "nombre":"Modelo 6",
+        "img":"assets/img/juegos de mesa/6.jpg",
+        "preciou":8.00,
+        "precio por mayor":6.00,
+        "entregadomicilio":true
+     },
+    {
+       "nombre":"Modelo 7",
+       "img":"assets/img/juegos de mesa/7.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    }
+ ]

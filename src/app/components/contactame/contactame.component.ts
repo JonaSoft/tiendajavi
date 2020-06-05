@@ -53,9 +53,10 @@ export class ContactameComponent implements OnInit {
         this.chats = db.collection('chats').valueChanges();
         //console.log('chats',_cs.chats)
         //this.users = db.collection('users').valueChanges();
-    
-        //cargar mensajes desde el servicio
-        this._cs.cargarMensajes()
+        if(localStorage.getItem('uid')){
+
+
+          this._cs.cargarMensajes()
           .subscribe( (res)=>{
             //console.log(res.length)
             //console.log('mensajes',res[7].nombre)
@@ -79,6 +80,14 @@ export class ContactameComponent implements OnInit {
                   
             });
 
+
+            
+          console.log('existe')
+        } else{
+          console.log('aún no existe')
+        } 
+        //cargar mensajes desde el servicio
+        
          
        }
 

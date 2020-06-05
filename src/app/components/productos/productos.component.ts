@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {ProductosService} from '../../servicios/productos.service';
+
 
 @Component({
   selector: 'app-productos',
@@ -12,6 +13,7 @@ export class ProductosComponent implements OnInit {
   producto:any =[];
 
   constructor( private activateRoute:ActivatedRoute,
+               private router: Router,
                private _producto:ProductosService ) { 
     this.activateRoute.params.subscribe(params =>{
       console.log(params['id']);
@@ -26,6 +28,9 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  Ir(){
+    this.router.navigate(['/inicio'])
   }
 
 }

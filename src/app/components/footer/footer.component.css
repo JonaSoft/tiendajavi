@@ -6,31 +6,25 @@ body{
    }
    .medida{
      height: 150px;
-     max-width: 200px;
-     min-width: 30px;
+     width:250px;
+     
      margin-top: 5px;
+     border-radius:5px;
    }
-   .medida1{
-     height: 150px;
-     max-width: 200px;
-     min-width: 50px;
-     margin-top: 5px;
-   }
-   .medida2{
-     height: 150px;
-     max-width: 200px;
-     min-width: 50px;
-     margin-top: 5px;
-   }
+   
    p{
      font-size:0.9rem;
      font-family: 'Arbutus', cursive;
-     
-
+   }
+   a{
+     text-decoration: none;
+     font-family:'Averia+Gruesa',cursive;
+      font-size:18px;
+      color:rgb(247, 251, 13)
    }
    h5{
       text-align: center;
-      color:rgb(26, 27, 27);
+      color:rgb(225, 233, 233);
       font-family:'Arbutus', cursive; 
    }
    

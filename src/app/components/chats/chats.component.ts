@@ -11,11 +11,11 @@ export interface Item { email:string;nombre: string; url:string}
 
 
 @Component({
-  selector: 'app-Contactame',
-  templateUrl: './contactame.component.html',
-  styleUrls: ['./contactame.component.css']
+  selector: 'app-chats',
+  templateUrl: './chats.component.html',
+  styleUrls: ['./chats.component.css']
 })
-export class ContactameComponent implements OnInit {
+export class ChatsComponent implements OnInit {
 
 //archivos images sobre el input
   estaSobreInput = false;
@@ -68,12 +68,12 @@ export class ContactameComponent implements OnInit {
               if (res[elementos].nombre!=localStorage.getItem('email')){
                // this.reproducir()
               }
-              //this.elemento = document.getElementById('app-mensajes');
+              this.elemento = document.getElementById('app-mensajes');
             
             }
             this.elemento = document.getElementById('app-mensajes');
             setTimeout(() => {
-              //this.elemento.scrollTop = this.elemento.scrollHeight;
+              this.elemento.scrollTop = this.elemento.scrollHeight;
             
             },3500);
                   

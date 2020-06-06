@@ -30,6 +30,7 @@ import { ProductosService } from './servicios/productos.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ItemComponent } from './components/item/item.component';
 
 
 
@@ -44,7 +45,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ProductosComponent,
     FooterComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

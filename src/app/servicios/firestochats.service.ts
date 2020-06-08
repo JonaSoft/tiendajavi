@@ -62,9 +62,8 @@ export class FirestochatsService {
                   setTimeout(async() => {
                     await this.auth.signInWithPopup(new auth.GoogleAuthProvider());
                     //location.reload();  
-                    this.router.navigate(['contactame'])
                   }, 2000);
-                  
+                  this.router.navigate(['contactame'])
                 } else {
                   
                     this.afAuth.signInWithPopup(new auth.FacebookAuthProvider());
@@ -97,7 +96,7 @@ export class FirestochatsService {
                                 for ( let mensaje of mensajes){
                                     //adiciona al inicio de la matriz
 
-                                    if(mensaje.nombre === localStorage.getItem('email') || mensaje.nombre === "jonasoft service"){
+                                    if(mensaje.nombre === localStorage.getItem('email') || mensaje.nombre === "Javier Tapia"){
                                       this.chats.unshift(mensaje);
                                     }
                                     

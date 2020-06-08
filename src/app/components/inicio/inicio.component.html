@@ -3,13 +3,13 @@
 
 <div class="container" style="min-height:350px;">
     
-      <h2 class="text-center mt-2"style="color:#1137BB;font-family:Carter One;"> Te presentamos nuestro Catálogo </h2>
+      <h2 class="text-center mt-2"style="color:#1137BB;font-family:Carter One;"> Te presentamos nuestro Catálogo de Productos </h2>
       <div class="row row-cols-1 row-cols-md-3 m-2">
         <div class="card" *ngFor="let productos of inicioproductos, let i= index"style="background-color=grey;">
           <div class=" p-2">
             <img [src]="productos.img" class="card-img-top" height="200"alt="..."  >
             <div class="card-body">
-                <h5 class="card-title text-center"style="font-family: 'Arbutus', cursive;">{{productos.nombre}}</h5>
+                <h2 class="card-title text-center"style="font-family: 'Arbutus', cursive;">{{productos.nombre}}</h2>
                 <p class="card-text" style="font-family:'Averia Gruesa Libre', cursive">This card has supporting text below as a natural lead-in to additional content.</p>
                 
                 <div class="p-2">

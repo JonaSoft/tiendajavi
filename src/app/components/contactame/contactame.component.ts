@@ -58,18 +58,13 @@ export class ContactameComponent implements OnInit {
 
           this._cs.cargarMensajes()
           .subscribe( (res)=>{
-            //console.log(res.length)
-            //console.log('mensajes',res[7].nombre)
-            //console.log(localStorage.getItem('email'))
             let elementos = res.length
             elementos=elementos-1
-            //console.log(elemento)
+           
             if (elementos!=-1){
               if (res[elementos].nombre!=localStorage.getItem('email')){
-               // this.reproducir()
               }
-              //this.elemento = document.getElementById('app-mensajes');
-            
+                      
             }
             this.elemento = document.getElementById('app-mensajes');
             setTimeout(() => {
@@ -117,13 +112,16 @@ export class ContactameComponent implements OnInit {
     this._cs.agregarMensajes(this.mensaje,this.usuarionombre,this.correo)
       .then(()=>{
         this.mensaje=""
-        
+        //desplaza barra
+        this.elemento = document.getElementById('app-mensajes');
+        this.elemento.scrollTop = this.elemento.scrollHeight;  
       })
-      .catch((err)=>console.log(err))
-      this.elemento = document.getElementById('app-mensajes');
+      .catch((err)=>console.log(err));
+
+      //this.elemento = document.getElementById('app-mensajes');
       console.log(this.elemento)
       //this._cargaImagenes.cargarImagenesFirebase(this.archivos)  
-      this.elemento.scrollTop = this.elemento.scrollHeight;
+      //this.elemento.scrollTop = this.elemento.scrollHeight;
   }
   
   

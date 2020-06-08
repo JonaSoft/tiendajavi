@@ -13,8 +13,11 @@ export class LoginComponent{
       ingresar(proveedor:string){
         console.log(proveedor)
         this._cs.login(proveedor)
+      
       }
     
 
   }
   //location.reload();
+  //http://local.foo.com/politica.html
+  //https://firechats-941e2.firebaseapp.com/condiciones.html

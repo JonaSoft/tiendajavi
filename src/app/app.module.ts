@@ -31,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ItemComponent } from './components/item/item.component';
+import { PoliticasComponent } from './components/politicas/politicas.component';
 
 
 
@@ -46,7 +47,8 @@ import { ItemComponent } from './components/item/item.component';
     FooterComponent,
     NavbarComponent,
     CarouselComponent,
-    ItemComponent
+    ItemComponent,
+    PoliticasComponent
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,13 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactameComponent } from './components/contactame/contactame.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ItemComponent } from './components/item/item.component'
+import { PoliticasComponent } from './components/politicas/politicas.component';
 
 
 const RUTAS: Routes = [
     {path: 'inicio', component: InicioComponent},
     {path: 'contactame', component:ContactameComponent},
+    {path: 'politicas', component: PoliticasComponent},
     {
         path: 'productos/:id',
         component:ProductosComponent,

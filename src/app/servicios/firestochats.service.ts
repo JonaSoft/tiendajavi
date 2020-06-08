@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 //import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -30,7 +31,8 @@ export class FirestochatsService {
 
               private afs1: AngularFirestore,
               public db: AngularFirestore,
-              public auth: AngularFireAuth) {
+              public auth: AngularFireAuth,
+              private router: Router) {
 
                 this.afAuth.authState.subscribe( user =>{
                   console.log('Estado de Usuario', user);
@@ -57,22 +59,27 @@ export class FirestochatsService {
 
               login(proveedor:string) {
                 if (proveedor==='google'){
-                  this.auth.signInWithPopup(new auth.GoogleAuthProvider());
-                  //location.reload();
+                  setTimeout(async() => {
+                    await this.auth.signInWithPopup(new auth.GoogleAuthProvider());
+                    location.reload();  
+                  }, 2000);
+                  
                 } else {
                   
-                    this.auth.signInWithPopup(new auth.FacebookAuthProvider());
+                    this.afAuth.signInWithPopup(new auth.FacebookAuthProvider());
                   
                 }
               }
               
               logout() {
+                console.log('saliendo');
                 localStorage.removeItem('correo');
                 localStorage.removeItem('token');
                 localStorage.removeItem('email');
                 localStorage.removeItem('uid');
                 this.usuario={}
                 this.auth.signOut();
+                this.router.navigate(['contactame'])
               }
 
   cargarMensajes(){

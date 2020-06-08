@@ -68,5 +68,41 @@
       "preciou":8.00,
       "precio por mayor":6.00,
       "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 11",
+      "img":"assets/img/accesorios/11.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 12",
+      "img":"assets/img/accesorios/12.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 13",
+      "img":"assets/img/accesorios/13.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 14",
+      "img":"assets/img/accesorios/14.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 15",
+      "img":"assets/img/accesorios/15.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
    }
+
  ]

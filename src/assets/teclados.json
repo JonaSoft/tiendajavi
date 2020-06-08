@@ -54,5 +54,12 @@
         "preciou":8.00,
         "precio por mayor":6.00,
         "entregadomicilio":true
+     },
+     {
+      "nombre":"Modelo 9",
+      "img":"assets/img/teclados/9.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
      }
  ]

@@ -61,7 +61,8 @@ export class FirestochatsService {
                 if (proveedor==='google'){
                   setTimeout(async() => {
                     await this.auth.signInWithPopup(new auth.GoogleAuthProvider());
-                    location.reload();  
+                    //location.reload();  
+                    this.router.navigate(['contactame'])
                   }, 2000);
                   
                 } else {

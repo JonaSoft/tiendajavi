@@ -1,93 +1,78 @@
-.contenedorchat {
-    margin-top:3px;
-    border: 2px outset black;
-    width:auto;
-    max-width: 100%;
-    /*min-width: 300px;*/
-    height: 570px;
-    background: rgb(6, 22, 59);
-    color: gray;
-    font-family: 'Carter One', cursive;
-    font-size: 12px;
-    border-radius: 5px 5px 5px 5px
-    
+
+h5{
+  text-align: center;
+  color:rgb(26, 27, 27);
+  font-family:'Averia Gruesa Libre', cursive; 
+  font-family: 'Arbutus', cursive;
 }
 button{
-    font-family: 'Carter One', cursive;
+  font-family: 'Carter One', cursive;
 }
-h5{
-    text-align: center;
-    color:rgb(26, 27, 27);
-    font-family:'Averia Gruesa Libre', cursive; 
-    font-family: 'Arbutus', cursive;
- }
- .contacto{
+.contacto{
     font-family: 'Arbutus', cursive;
     font-family:'Averia Gruesa Libre', cursive; 
  }
-
-.chat-window {
-    height: 410px;
-    min-height: auto;
+/*------------------------*/
+.main-container{
+    margin-top: 40px;
+    margin-bottom: 150px;
+  }
+  
+  .puntero{
+    cursor: pointer;
+  }
+  
+  
+  .chat-window{
+    padding: 25px;
+    width: 100%;
+    height: 560px;
     overflow: hidden;
-    border: 3px outset gray;
+    border: 2px solid rgb(14, 69, 180);
     border-radius: 20px;
-    padding: 0px
-}
-.send-window {
-    height: auto;
-    overflow: hidden;
-   
-    /*border: 3px outset gray;*/
-    /*border-radius: 20px;*/
-    padding: 0px
-}
+    margin-top:5%;
+  }
+  
+  .app-mensajes{
+    overflow-y:auto;
+    height:430px;
+    background:rgb(224, 222, 222);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(14, 69, 180);
 
-.app-mensajes {
-    overflow-y: scroll;
-    height: 400px;
-    padding: 3px;
-    font-family: tahoma;
-    font-size: 15px;
-}
-
-.titulousuarios {
-    font-size:15px;
-    
-    color: rgb(228, 240, 123);
-    font-family: cursive;
-}
-/*cuando se envian imagenes*/
-.file-over {
-    border: 2px dotted rgb(56, 224, 106);
-    background-color: rgb(118, 119, 122);
-}
-
-/* Animaciones */
-
-.animated {
+  }
+  input {
+    background:rgb(224, 222, 222);
+  }
+  
+  
+  /* Animaciones */
+  .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-}
-
-.fast {
+  }
+  
+  .fast {
     -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
+      opacity: 0;
     }
+  
     to {
-        opacity: 1;
+      opacity: 1;
     }
-}
-
-.fadeIn {
+  }
+  
+  .fadeIn {
     animation-name: fadeIn;
-}
+  }
+  

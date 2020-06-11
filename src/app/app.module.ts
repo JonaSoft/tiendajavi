@@ -10,14 +10,20 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
+
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactameComponent } from './components/contactame/contactame.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ItemComponent } from './components/item/item.component';
+import { PoliticasComponent } from './components/politicas/politicas.component';
+import { ChatsComponent } from './components/chats/chats.component';
 
-import {  FirestochatsService } from "./servicios/firestochats.service";
-import { CargaImagenesService } from './servicios/carga-imagenes.service';
+
 
 import { APP_ROUTES } from './app.routes';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
@@ -27,11 +33,9 @@ import { RegistroComponent } from './components/registro/registro.component';
 
 //servicios
 import { ProductosService } from './servicios/productos.service';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { ItemComponent } from './components/item/item.component';
-import { PoliticasComponent } from './components/politicas/politicas.component';
+import { FirestochatsService } from "./servicios/firestochats.service";
+import { CargaImagenesService } from './servicios/carga-imagenes.service';
+import { ChatService } from '../app/servicios/chat.service'
 
 
 
@@ -48,7 +52,8 @@ import { PoliticasComponent } from './components/politicas/politicas.component';
     NavbarComponent,
     CarouselComponent,
     ItemComponent,
-    PoliticasComponent
+    PoliticasComponent,
+    ChatsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,8 @@ import { PoliticasComponent } from './components/politicas/politicas.component';
   providers: [
     FirestochatsService,
     CargaImagenesService,
-    ProductosService
+    ProductosService,
+    ChatService
   ],
   bootstrap: [AppComponent]
 })

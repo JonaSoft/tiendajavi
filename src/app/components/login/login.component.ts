@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FirestochatsService} from '../../servicios/firestochats.service'
+import { ChatService } from '../../servicios/chat.service'
+
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,14 @@ import { FirestochatsService} from '../../servicios/firestochats.service'
 })
 export class LoginComponent{
 
-  constructor(public  _cs: FirestochatsService) { }
+  constructor(public _cs:ChatService) { }
 
-      ingresar(proveedor:string){
+      Ingresar(proveedor:string){
         console.log(proveedor)
         this._cs.login(proveedor)
       
       }
+      
     
 
   }

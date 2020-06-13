@@ -14,7 +14,7 @@ import { environment } from '../environments/environment';
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { ContactameComponent } from './components/contactame/contactame.component';
+
 import { ProductosComponent } from './components/productos/productos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -43,7 +43,6 @@ import { ChatService } from '../app/servicios/chat.service'
   declarations: [
     AppComponent,
     InicioComponent,
-    ContactameComponent,
     NgDropFilesDirective,
     LoginComponent,
     RegistroComponent,

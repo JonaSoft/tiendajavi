@@ -1,4 +1,6 @@
-
+input,p{
+  font-family: 'Ubuntu', sans-serif;
+}
 h5{
   text-align: center;
   color:rgb(26, 27, 27);
@@ -12,6 +14,10 @@ button{
     font-family: 'Arbutus', cursive;
     font-family:'Averia Gruesa Libre', cursive; 
  }
+ .contactochat{
+  
+  font-family:'Averia Gruesa Libre'; 
+}
 /*------------------------*/
 .main-container{
     margin-top: 40px;
@@ -49,15 +55,15 @@ button{
   
   /* Animaciones */
   .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
   
   .fast {
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.9s;
+    animation-duration: 0.9s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }

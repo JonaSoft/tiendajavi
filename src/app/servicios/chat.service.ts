@@ -53,7 +53,18 @@ export class ChatService {
                                       console.log(mensajes);
                                       this.chats =[];
                                       for( let mensaje of mensajes){
-                                          this.chats.unshift(mensaje);
+                                        if(this.usuario.correo == "latiendadejavi1@gmail.com"){
+                                            
+                                            for( let mensaje1 of mensajes){
+                                                this.chats.unshift(mensaje1)
+                                            }
+                                          return this.chats
+                                        } else{
+                                            if(mensaje.correo==this.usuario.correo || mensaje.correo=="latiendadejavi1@gmail.com" || mensaje.fecha==new Date().getTime()){
+                                              this.chats.unshift(mensaje);
+                                            }
+                                            //return this.chats  
+                                        }
                                       }
                                       //this.chats = mensajes
                                       return this.chats;

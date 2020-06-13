@@ -2,15 +2,16 @@
     <div class="row">
         <br>
         
-        <div class="col-md-12 text-center mt-5" *ngIf="!_cs.usuario.uid">
-            <button type="button" class="btn btn-outline-primary"
-                    (click)="Ingresar('google')">
-                Continuar con Google
-            </button>
-            
-            <button type="button" class="btn btn-outline-info"
+        <div class="col-md-12 text-center mt-5" *ngIf="!_cs.usuario.uid" style="min-height:400px;">
+             
+            <button type="button" class="btn btn-info"
                     (click)="Ingresar('facebook')">
-                Continuar con Facebook
+                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"> Continuar con Facebook</i>
+            </button>
+            <button type="button" class="btn btn-warning"
+                    (click)="Ingresar('google')">
+                    <i class="fa fa-google fa-2x" aria-hidden="true"> Continuar con Google</i>
+                    
             </button>
         </div>
         <app-chats *ngIf="_cs.usuario.uid"></app-chats>

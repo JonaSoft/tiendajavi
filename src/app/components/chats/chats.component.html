@@ -3,13 +3,13 @@
       {{item.mensaje}}
     </li>
 </ul>-->
-<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">HOLA !!! dime en que te puedo servir? </h2>
+<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!!, en que te puedo servir? </h2>
 
 
-<div class="container">
+<div class="container animated fadeIn fast ">
   <div class="row">
-      <div class="col-md-5 container">
-        <div class="card mt-3" style="width:100%">
+      <div class="col-md-5 container" style="border-radius: 20px;">
+        <div class="card mt-3" style="width:100%" >
           <img src="../../../assets/img/about.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">La Tienda de Javi</h5>
@@ -19,7 +19,7 @@
                 <span>(051)994-705392 - 965146706</span>
             </p>
             <div class="container d-flex justify-content-between"style="">
-              <a  class="card-link text-left">
+              <a  href ="/inicio" class="card-link text-left">
                 <button class="btn btn-info">
                     Ir al Catálogo
                 </button>
@@ -40,11 +40,16 @@
           <div *ngFor="let chat of _cs.chats">
               <div [ngClass]="{'text-left ':_cs.usuario.nombre != chat.nombre,
                           'text-right': _cs.usuario.nombre == chat.nombre }">
-                    <span class="badge"
+                    <span class="badge contactochat"
                           [ngClass]="{ 'badge-primary':_cs.usuario.nombre == chat.nombre,
                                       'badge-success':_cs.usuario.nombre != chat.nombre }">
                         {{chat.nombre}}
                     </span>
+                <div >
+                    <span style="font-size:12px;color:gray">
+                          [{{chat.fecha | date:'medium'}}] dice:
+                    </span>
+                </div>
                     <p>{{chat.mensaje}}</p>
               </div>
           </div>

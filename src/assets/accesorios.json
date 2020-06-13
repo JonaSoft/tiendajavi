@@ -103,6 +103,28 @@
       "preciou":8.00,
       "precio por mayor":6.00,
       "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 16",
+      "img":"assets/img/accesorios/16.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 17",
+      "img":"assets/img/accesorios/17.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Modelo 18",
+      "img":"assets/img/accesorios/18.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
    }
+
 
  ]

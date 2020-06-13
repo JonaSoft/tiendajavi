@@ -65,6 +65,13 @@
        "entregadomicilio":true
     },
     {
+      "nombre":"Parlantes",
+      "img":"assets/img/parlantes.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+    },
+    {
        "nombre":"Teclados",
        "img":"assets/img/teclados.jpg",
        "preciou":8.00,

@@ -33,11 +33,8 @@ export class ItemComponent implements OnInit {
     let producto = this.imagen.substr(11);
     producto = producto.slice(0,producto.indexOf("/"));
     console.log(producto);
-    this._router.navigate(['/productos/',producto])
+    this._router.navigate(['/productos',producto])
     //this._router.navigateByUrl('/productos/'+producto)
     location.reload();
-    
-
   }
-
 }

@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 //importar servicio para subscripcion de mensajes
 import { ChatService } from '../../servicios/chat.service';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +16,8 @@ export class ChatsComponent  {
   elemento:any;
   chats: Observable<any[]>;
   constructor(firestore: AngularFirestore,
-              public _cs: ChatService) {
+              public _cs: ChatService,
+              private _router:Router) {
       this.chats = firestore.collection('chats').valueChanges();
       //llamando desde chat.service
       this._cs.cargarMensajes()
@@ -28,7 +29,9 @@ export class ChatsComponent  {
                   
                 })
   }
- 
+  inicio(){
+    this._router.navigate(['inicio'])
+  }
   enviarMensaje(){
     console.log(this.mensaje)
     if (this.mensaje.length === 0){

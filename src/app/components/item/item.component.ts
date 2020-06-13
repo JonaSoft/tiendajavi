@@ -26,14 +26,14 @@ export class ItemComponent implements OnInit {
     this._router.navigate(['/inicio'])
   }
   alContacto(){
-    this._router.navigate(['/contactame'])
+    this._router.navigate(['/contacto'])
   }
   alProducto(){
     console.log(this.imagen);
     let producto = this.imagen.substr(11);
     producto = producto.slice(0,producto.indexOf("/"));
     console.log(producto);
-    this._router.navigate(['/productos/'+producto])
+    this._router.navigate(['/productos/',producto])
     //this._router.navigateByUrl('/productos/'+producto)
     location.reload();
     

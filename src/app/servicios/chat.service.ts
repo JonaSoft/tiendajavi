@@ -6,6 +6,7 @@ import { Mensaje } from '../interfaces/mensaje.interface';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -18,7 +19,8 @@ export class ChatService {
   public chats:Mensaje[] =[];
   public usuario:any = {};
   constructor(private afs: AngularFirestore,
-              public auth: AngularFireAuth) {
+              public auth: AngularFireAuth,
+              public router: Router) {
 
                 this.auth.authState.subscribe( user =>{
 
@@ -34,7 +36,13 @@ export class ChatService {
 
   //desde login
   login(proveedor:string) {
+    if(proveedor==="facebook"){
+      console.log('ingreso a web');
+      this.router.navigate(['https://www.facebook.com/profile.php?id=100034770665438']);
+      return
+    }
     this.auth.signInWithPopup(new auth.GoogleAuthProvider());
+
   }
   logout() {
     this.usuario={}

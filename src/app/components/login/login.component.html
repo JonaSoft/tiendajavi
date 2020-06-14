@@ -4,9 +4,12 @@
         
         <div class="col-md-12 text-center mt-5" *ngIf="!_cs.usuario.uid" style="min-height:400px;">
              
-            <button type="button" class="btn btn-info"
-                    (click)="Ingresar('facebook')">
-                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"> Continuar con Facebook</i>
+            <button type="button" class="btn btn-outline-info">
+                   <i class="fa fa-facebook-square fa-2x" aria-hidden="true"> 
+                        <a href="https://www.facebook.com/profile.php?id=100034770665438" target="_blank">
+                            Continuar con Facebook
+                        </a>
+                    </i>
             </button>
             <button type="button" class="btn btn-warning"
                     (click)="Ingresar('google')">

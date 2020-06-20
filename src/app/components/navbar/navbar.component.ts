@@ -28,7 +28,7 @@ export class NavbarComponent implements OnInit {
       this._router.navigate(['productos', idx]);
 
     } else{
-      const found = productos.find(element =>element==idx)
+      const found = productos.find(element =>element.includes(idx))
       setTimeout(() => {
         this.activa=false;
         localStorage.removeItem('buscador');

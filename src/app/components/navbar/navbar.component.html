@@ -37,7 +37,7 @@
         aria-label="Search"
         style="font-family:'Arbutus';" >
     <button (click)="buscador(forma.value)"
-        class="btn btn-outline-success my-2 my-sm-0" type="button" style="font-family:'Arbutus', cursive;font-size:14px;">
+        class="btn btn-outline-success my-2 my-sm-0" type="button" style="font-family:'Arbutus', cursive;font-size:14px;width:100px;">
         <app-loading *ngIf="activa"></app-loading>
         <span *ngIf="!activa">Buscar</span>
     </button>

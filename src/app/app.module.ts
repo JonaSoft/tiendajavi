@@ -28,14 +28,15 @@ import { ChatsComponent } from './components/chats/chats.component';
 import { APP_ROUTES } from './app.routes';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 import { LoginComponent } from './components/login/login.component';
-import { RegistroComponent } from './components/registro/registro.component';
+
 
 
 //servicios
 import { ProductosService } from './servicios/productos.service';
 import { FirestochatsService } from "./servicios/firestochats.service";
 import { CargaImagenesService } from './servicios/carga-imagenes.service';
-import { ChatService } from '../app/servicios/chat.service'
+import { ChatService } from '../app/servicios/chat.service';
+import { LoadingComponent } from './components/loading/loading.component'
 
 
 
@@ -45,14 +46,15 @@ import { ChatService } from '../app/servicios/chat.service'
     InicioComponent,
     NgDropFilesDirective,
     LoginComponent,
-    RegistroComponent,
+    
     ProductosComponent,
     FooterComponent,
     NavbarComponent,
     CarouselComponent,
     ItemComponent,
     PoliticasComponent,
-    ChatsComponent
+    ChatsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

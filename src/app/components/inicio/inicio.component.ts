@@ -10,6 +10,8 @@ import { Router } from '@angular/router'
 })
 export class InicioComponent  {
   public inicioproductos:any=[];
+  activa=false
+  mostrarslider=true;
 
   constructor( private _productosServices: ProductosService,
                 private _router:Router) { 
@@ -18,6 +20,14 @@ export class InicioComponent  {
       console.log(res)
       this.inicioproductos=res
     })
+    if(localStorage.getItem('buscador')){
+        this.mostrarslider=false
+    } else{
+      setTimeout(() => {
+        this.activa=true  
+      }, 2000);
+      this.activa=false  
+    }
   }
   verProducto(idx:any){
     console.log(idx)

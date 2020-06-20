@@ -1,9 +1,10 @@
 
-
-
+<!--<app-loading *ngIf="activa"></app-loading>-->
+<app-carousel *ngIf="mostrarslider" ></app-carousel>
 <div class="container animated fadeIn fast" style="min-height:350px;">
+ 
     
-      <h2 class="text-center text-dark mt-2"style="font-family:Carter One;"> Nuestro Catálogo </h2>
+      <h2 class="text-center text-dark mt-2"style="font-size:2.5rem;font-family:Luckiest Guy,cursive;"> Nuestro Catálogo </h2>
       <div class="row row-cols-1 row-cols-md-3 m-2">
         <div class="card" *ngFor="let productos of inicioproductos, let i= index"style="background-color=grey;">
           <div class=" p-2">

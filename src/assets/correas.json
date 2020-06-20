@@ -1,0 +1,16 @@
+[
+    {
+       "nombre":"Modelo 1",
+       "img":"assets/img/correas/1.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    },
+    {
+       "nombre":"Modelo 2",
+       "img":"assets/img/correas/2.jpg",
+       "preciou":8.00,
+       "precio por mayor":6.00,
+       "entregadomicilio":true
+    }
+]

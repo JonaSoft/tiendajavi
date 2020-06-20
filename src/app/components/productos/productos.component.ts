@@ -10,7 +10,9 @@ import {ProductosService} from '../../servicios/productos.service';
 })
 export class ProductosComponent implements OnInit {
   mostrarItem:boolean;
-  producto:any =[];
+  producto:any=[];
+  nombre:string;
+  mostrar=true;
 
   constructor( private activateRoute:ActivatedRoute,
                private router: Router,
@@ -18,17 +20,19 @@ export class ProductosComponent implements OnInit {
     this.mostrarItem=false;
     this.activateRoute.params.subscribe(params =>{
       console.log(params['id']);
+      this.nombre= params['id'];
+      this.nombre= this.nombre.toUpperCase();
       this._producto.getProducto(params['id'])
       .subscribe(res =>{
         console.log(res);
-        this.producto= res
-
+        this.producto= res;
       })
-
     })
+   
   }
 
   ngOnInit(): void {
+   
   }
   Ir(){
     this.router.navigate(['/inicio'])

@@ -14,6 +14,13 @@
       "entregadomicilio":true
    },
    {
+      "nombre":"Billeteras",
+      "img":"assets/img/billeteras.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
       "nombre":"Carcasas",
       "img":"assets/img/carcasas.jpg",
       "preciou":8.00,
@@ -30,6 +37,13 @@
    {
       "nombre":"Control Remoto",
       "img":"assets/img/controlremoto.jpg",
+      "preciou":8.00,
+      "precio por mayor":6.00,
+      "entregadomicilio":true
+   },
+   {
+      "nombre":"Correas",
+      "img":"assets/img/correas.jpg",
       "preciou":8.00,
       "precio por mayor":6.00,
       "entregadomicilio":true

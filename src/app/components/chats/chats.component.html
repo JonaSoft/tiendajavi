@@ -3,38 +3,13 @@
       {{item.mensaje}}
     </li>
 </ul>-->
-<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!!, en que te puedo servir? </h2>
+<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!! en que te puedo servir? </h2>
 
 
 <div class="container animated fadeIn fast ">
   <div class="row">
-      <div class="col-md-5 container" style="border-radius: 20px;">
-        <div class="card mt-3" style="width:100%" >
-          <img src="../../../assets/img/about.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">La Tienda de Javi</h5>
-            <p class="card-text contacto"><span>San Miguel Lima-Perú</span><br>
-                <span><a>latiendadejavi1@gmail.com </a></span><br>
-
-                <span>(051)994-705392 - 965146706</span>
-            </p>
-            <div class="container d-flex justify-content-between"style="">
-              <a  class="card-link text-left">
-                <button class="btn btn-info" (click)="inicio()">
-                    Ir al Catálogo
-                </button>
-              </a>
-              <a class="card-link text-right">
-                <button class="btn btn-danger" (click)="_cs.logout()">
-                    Cerrar Sesión
-                </button>
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 container bg-white chat-window  p-2">
+     
+      <div class="col-md-12 container bg-white chat-window  p-2">
         <div class="container app-mensajes " id="app-mensajes">
 
           <div *ngFor="let chat of _cs.chats">

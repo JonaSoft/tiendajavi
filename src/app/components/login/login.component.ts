@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from '../../servicios/chat.service'
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+//importar servicio para subscripcion de mensajes
+import { ChatService } from '../../servicios/chat.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,17 +13,20 @@ import { ChatService } from '../../servicios/chat.service'
 })
 export class LoginComponent{
 
-  constructor(public _cs:ChatService) { }
+  constructor(public _cs:ChatService,
+              private _router:Router) { }
 
-      Ingresar(proveedor:string){
-        console.log(proveedor)
-        this._cs.login(proveedor)
-      
-      }
+
+    inicio(){
+        this._router.navigate(['inicio'])
+    }
+
+    Ingresar(proveedor:string){
+      console.log(proveedor)
+      this._cs.login(proveedor)
+    }
       
     
 
   }
-  //location.reload();
-  //http://local.foo.com/politica.html
-  //https://firechats-941e2.firebaseapp.com/condiciones.html
+ 

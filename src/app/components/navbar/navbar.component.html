@@ -19,7 +19,7 @@
         <a class="nav-link " routerLink="inicio" style="font-family:'Arbutus', cursive;font-size:16px;color:yellow;">Inicio </a>
       </li>
       <li class="nav-item "  routerLinkActive="active">
-        <a class="nav-link " routerLink="contacto" style="font-family:'Arbutus', cursive;font-size:16px;color:yellow;">Contacto</a>
+        <a class="nav-link " routerLink="contacto" style="font-family:'Arbutus', cursive;font-size:16px;color:yellow;">Contáctame</a>
       </li>
       <!--<li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
@@ -37,9 +37,9 @@
         aria-label="Search"
         style="font-family:'Arbutus';" >
     <button (click)="buscador(forma.value)"
-        class="btn btn-outline-success my-2 my-sm-0" type="button" style="font-family:'Arbutus', cursive;font-size:14px;width:100px;">
+        class="btn btn-dark my-2 my-sm-0" type="button" style="font-family:'Arbutus', cursive;font-size:14px;width:100px; color:white">
         <app-loading *ngIf="activa"></app-loading>
-        <span *ngIf="!activa">Buscar</span>
+        <span *ngIf="!activa"><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
     </button>
   </form>
 </nav>

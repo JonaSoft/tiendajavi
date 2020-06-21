@@ -8,4 +8,16 @@
   a{
     text-decoration: none;
   }
-  
+  h5{
+    text-align: center;
+    color:rgb(26, 27, 27);
+    font-family:'Averia Gruesa Libre', cursive; 
+    font-family: 'Arbutus', cursive;
+  }
+  button{
+    font-family: 'Carter One', cursive;
+  }
+  .contacto{
+      font-family: 'Arbutus', cursive;
+      font-family:'Averia Gruesa Libre', cursive; 
+   }

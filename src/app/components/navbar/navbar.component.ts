@@ -29,11 +29,20 @@ export class NavbarComponent implements OnInit {
 
     } else{
       const found = productos.find(element =>element.includes(idx))
-      setTimeout(() => {
-        this.activa=false;
-        localStorage.removeItem('buscador');
-        this._router.navigate(['productos', found])
-      }, 2000);
+        if(found){
+          setTimeout(() => {
+            this.activa=false;
+            localStorage.removeItem('buscador');
+            this._router.navigate(['productos', found])
+          }, 2000);
+        } else {
+          setTimeout(() => {
+            this.activa=false;
+            localStorage.removeItem('buscador');
+              this._router.navigate(['productos', 'accesorios'])
+          }, 2000);
+        }
+      
       /*let caja= document.getElementById('inputbuscar');
       caja.innerHTML=""*/
     }

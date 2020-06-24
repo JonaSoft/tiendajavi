@@ -21,7 +21,8 @@ export class ProductosComponent implements OnInit {
     this.activateRoute.params.subscribe(params =>{
       console.log(params['id']);
       this.nombre= params['id'];
-      if (this.nombre==="audifonos")this.nombre="audífonos";
+      //if (this.nombre==="audifonos")this.nombre="audífonos";
+      //if (this.nombre==="camaras web")this.nombre="cámaras web";
       this.nombre= this.nombre.toUpperCase();
       this._producto.getProducto(params['id'])
       .subscribe(res =>{

@@ -2,14 +2,14 @@
     <li class="text" *ngFor="let item of chats | async">
       {{item.mensaje}}
     </li>
-</ul>-->
-<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!! en que te puedo servir? </h2>
+</ul>
+<h2 class="text-center mt-2"style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!! en que te puedo servir? </h2>-->
 
 
-<div class="container animated fadeIn fast ">
+<div class="container-fluid animated fadeIn fast ">
   <div class="row">
      
-      <div class="col-md-12 container bg-white chat-window  p-2">
+      <div class="col-md-12 container-fluid bg-white chat-window  p-2">
         <div class="container app-mensajes " id="app-mensajes">
 
           <div *ngFor="let chat of _cs.chats">
@@ -33,19 +33,36 @@
         </div> 
        
         
-        <div class="container-fluid mt-2 mb-2 " style=" border: 1px solid #4080FF;border-radius:10px;">
+        <div class="container-fluid mt-2 " style="">
        
           <input type="text" name="mensaje"
             class="form-control mt-2"
             [(ngModel)]="mensaje"
             (keyup.enter)="enviarMensaje()"
-            placeholder = "Enviar mensaje..."
+            placeholder = "Tu mensaje..."
           >
-          <button
-              (click)="enviarMensaje()"
-              class="btn btn-primary btn-block mt-2 mb-2">
-              Enviar
-          </button>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <button
+                  (click)="enviarMensaje()"
+                  class="btn btn-primary btn-block mt-3 ">
+                  Enviar Mensaje
+                </button>    
+              </div>
+              <div class="col-md-6 col-sm-12">
+                  <button
+                    (click)="_cs.logout()" 
+                    class="btn btn-danger btn-block mt-3" >
+                    Cerrar Sesión 
+                  </button>
+              </div>
+              
+            </div>
+            
+            
+          </div>
+          
          
         </div>
         <br>

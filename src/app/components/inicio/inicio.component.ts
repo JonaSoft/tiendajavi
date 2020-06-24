@@ -34,9 +34,9 @@ export class InicioComponent  {
     idx=idx.toLowerCase()
     
     console.log(idx)
-    if (idx==="audífonos"){
+    /*if (idx==="audífonos"){
       idx="audifonos"
-    }
+    }*/
     this._router.navigate(['productos', idx])
   }
   

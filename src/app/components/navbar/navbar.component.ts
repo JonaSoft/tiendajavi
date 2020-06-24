@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   buscaproducto:any=[];
   activa=false;
+  mensaje=false;
   constructor(private _router:Router) { }
 
   ngOnInit(): void {
@@ -39,8 +40,13 @@ export class NavbarComponent implements OnInit {
           setTimeout(() => {
             this.activa=false;
             localStorage.removeItem('buscador');
-              this._router.navigate(['productos', 'accesorios'])
+            this._router.navigate(['productos', 'accesorios']);
+            this.mensaje=true;
           }, 2000);
+
+          setTimeout(() => {
+            this.mensaje=false;
+          }, 15000);
         }
       
       /*let caja= document.getElementById('inputbuscar');

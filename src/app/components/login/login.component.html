@@ -2,33 +2,38 @@
     <div class="row">
         <br>
         <div class="col-md-5 container" style="border-radius: 20px;">
-            <div class="card mt-3" style="width:100%" >
+            <div class="card" style="width:100%; margin-top:5%;max-height:560px;" >
               <img src="../../../assets/img/about2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">La Tienda de Javi</h5>
-                <p class="card-text contacto"><span>San Miguel Lima-Perú</span><br>
-                    <span><a>latiendadejavi1@gmail.com </a></span><br>
+                <p class="card-text mt-3 contacto">
+                  <span>Mercado modelo de San Miguel Psto 70 </span><br>
+                    <span>cdra 8 Av. La Paz - San Miguel</span><br>                  
+                    <span class="text-primary"><a>latiendadejavi1@gmail.com </a></span><br>
     
-                    <span>(051)994-705392 - 965146706</span>
+                    <span>(051)965146706</span>
                 </p>
-                <div class="container d-flex justify-content-between"style="">
-                  <a  class="card-link text-left">
-                    <button class="btn btn-info" (click)="inicio()">
+                <div class="container d-flex justify-content-center"style="">
+                  <a  class="card-link text-center">
+                    <button class="btn btn-primary btn-block mt-2" (click)="inicio()">
                         Ir al Catálogo
                     </button>
                   </a>
-                  <a class="card-link text-right">
+                  <!--<a class="card-link text-right">
                     <button class="btn btn-danger" (click)="_cs.logout()">
                         Cerrar Sesión
                     </button>
-                  </a>
+                  </a>-->
                 </div>
     
               </div>
+              
             </div>
           </div>
-        <div class="col-md-7 text-center" *ngIf="!_cs.usuario.uid" style="min-height:400px;">
-            <h2 class="text-center mt-2 "style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!!, en que te puedo servir? </h2>
+          <div class="col-md-2"></div>
+
+        <div class="col-md-5 text-center" *ngIf="!_cs.usuario.uid" style="min-height:400px;">
+            <h2 class="text-center mt-2 "style="color:#1137BB ;font-family:Carter One;">!!! HOLA !!!, en que te puedo ayudar? </h2>
             <button type="button  mt-5" class="btn btn-warning"style="margin-top:25%;"
                    
                     (click)="Ingresar('google')">
@@ -44,7 +49,10 @@
                     
             </button>
         </div>
-        <app-chats *ngIf="_cs.usuario.uid"></app-chats>
+        <div class="col-md-5 container text-center" *ngIf="_cs.usuario.uid">
+          <app-chats ></app-chats>
+        </div>
+        
         <!--<div class="col-md-12 text-right mt-2" *ngIf="_cs.usuario.uid">
             <button type="button" class="btn btn-outline-danger"
                     (click)="_cs.logout()">

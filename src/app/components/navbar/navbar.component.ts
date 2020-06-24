@@ -22,19 +22,33 @@ export class NavbarComponent implements OnInit {
     localStorage.setItem('buscador','si');
     idx=idx.toLowerCase()
     //console.log(idx)
-    const productos=['accesorios','audifonos','billeteras','carcasas','celulares','control remoto','correas','higiene','juegos de mesa','mascarillas,mouses','parlantes','teclados'];
+    const productos=['accesorios','audífonos','audifonos','billeteras','cámaras','camaras','carcasas','celulares','control remoto','correas','higiene','juegos de mesa','mascarillas,mouses','parlantes','teclados'];
+    console.log(idx)
     
-    if (idx==="audífonos"){
-      idx="audifonos";
-      this._router.navigate(['productos', idx]);
-
+    if (idx==="audifonos"){
+      idx="audífonos";
+      //console.log('audifonos')
+      setTimeout(() => {
+        this.activa=false;
+        localStorage.removeItem('buscador');
+        this._router.navigate(['productos', idx]);  
+      }, 2000);
+      
+    };
+    if(idx==="camaras" || idx==="cámaras"){
+        idx="cámaras web";
+        setTimeout(() => {
+          this.activa=false;
+          localStorage.removeItem('buscador');
+          this._router.navigate(['productos', idx]);  
+        }, 2000);
     } else{
       const found = productos.find(element =>element.includes(idx))
         if(found){
           setTimeout(() => {
             this.activa=false;
             localStorage.removeItem('buscador');
-            this._router.navigate(['productos', found])
+            this._router.navigate(['productos', found]);
           }, 2000);
         } else {
           setTimeout(() => {
@@ -46,7 +60,7 @@ export class NavbarComponent implements OnInit {
 
           setTimeout(() => {
             this.mensaje=false;
-          }, 15000);
+          }, 8000);
         }
       
       /*let caja= document.getElementById('inputbuscar');

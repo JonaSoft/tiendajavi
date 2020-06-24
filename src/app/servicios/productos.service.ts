@@ -18,8 +18,8 @@ export class ProductosService {
    }
    getProducto(articulo:any){
    console.log(articulo)
-
-    return this.http.get(`assets/${articulo}.json`)
+   //if(articulo==='audifonos') articulo = 'audífonos';
+   return this.http.get(`assets/${articulo}.json`)
 
    }
 }

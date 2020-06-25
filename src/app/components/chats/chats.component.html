@@ -33,9 +33,9 @@
         </div> 
        
         
-        <div class="container-fluid mt-2 " style="">
+        <div class="container-fluid mt-2 ">
        
-          <input type="text" name="mensaje"
+          <input type="text" name="mensaje"style="border-radius:10px;"
             class="form-control mt-2"
             [(ngModel)]="mensaje"
             (keyup.enter)="enviarMensaje()"
@@ -44,11 +44,13 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 col-sm-12">
+                
                 <button
                   (click)="enviarMensaje()"
                   class="btn btn-primary btn-block mt-3 ">
                   Enviar Mensaje
                 </button>    
+              
               </div>
               <div class="col-md-6 col-sm-12">
                   <button

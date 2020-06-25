@@ -20,6 +20,11 @@ export class ChatsComponent  {
               private _router:Router) {
       this.chats = firestore.collection('chats').valueChanges();
       //llamando desde chat.service
+      /*this._cs.bienvenida()
+                .then(()=>{
+                  console.log('bienvenida enviada')
+                })
+                .catch((err)=>{console.error('Error bienvenida',err)});*/
       this._cs.cargarMensajes()
                 .subscribe(()=>{
                   this.elemento = document.getElementById('app-mensajes');
@@ -40,8 +45,13 @@ export class ChatsComponent  {
     this._cs.agregarMensaje(this.mensaje)
             .then(()=>{
               console.log('Mensaje Enviado');
-              this.mensaje=""}
-            )
+              this.mensaje="";
+              this.reproducir()
+            })
             .catch((err)=>{console.error('Error al enviar',err)});
+  }
+  reproducir() {
+    const audio = new Audio('assets/sound/iphone.mp3');
+    audio.play();
   }
 }

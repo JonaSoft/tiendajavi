@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class ChatService {
 
-  private itemsCollection: AngularFirestoreCollection<Mensaje>;
+  public itemsCollection: AngularFirestoreCollection<Mensaje>;
 
   public chats:Mensaje[] =[];
   public usuario:any = {};
@@ -50,34 +50,33 @@ export class ChatService {
   }
               
 
-
-
-
   cargarMensajes(){
     this.itemsCollection = this.afs.collection<Mensaje>('chats',ref => ref.orderBy('fecha','desc')
                                                                           .limit(10));
+    this.bienvenida()
+
     return this.itemsCollection.valueChanges().pipe(
-                                map( (mensajes: Mensaje[]) =>{
-                                      console.log(mensajes);
-                                      this.chats =[];
-                                      for( let mensaje of mensajes){
-                                        if(this.usuario.correo == "latiendadejavi1@gmail.com"){
-                                            
-                                            for( let mensaje1 of mensajes){
-                                                this.chats.unshift(mensaje1)
-                                            }
-                                          return this.chats
-                                        } else{
-                                            if(mensaje.correo==this.usuario.correo || mensaje.correo=="latiendadejavi1@gmail.com" || mensaje.fecha==new Date().getTime()){
-                                              this.chats.unshift(mensaje);
-                                            }
-                                            //return this.chats  
-                                        }
-                                      }
-                                      //this.chats = mensajes
-                                      return this.chats;
-                                    })
-                                )
+                map( (mensajes: Mensaje[]) =>{
+                  console.log(mensajes);
+                  this.chats =[];
+                  for( let mensaje of mensajes){
+                    if(this.usuario.correo == "latiendadejavi1@gmail.com"){
+                        
+                        for( let mensaje1 of mensajes){
+                            this.chats.unshift(mensaje1)
+                        }
+                      return this.chats
+                    } else{
+                        if(mensaje.correo==this.usuario.correo || mensaje.correo=="latiendadejavi1@gmail.com" || mensaje.fecha==new Date().getTime()){
+                          this.chats.unshift(mensaje);
+                        }
+                        //return this.chats  
+                    }
+                  }
+                  //this.chats = mensajes
+                  return this.chats;
+                })
+            )                                      
 
   }
   agregarMensaje( texto:string){
@@ -88,5 +87,14 @@ export class ChatService {
         fecha: new Date().getTime()
     }
     return this.itemsCollection.add(mensaje);
+  }
+  bienvenida(){
+    let mensaje:Mensaje ={
+      nombre:'Javier Tapia',
+      mensaje: 'Hola en que te ayudo?',
+      correo:'latiendadejavi1@gmail.com',
+      fecha: new Date().getTime()
+    }
+    this.itemsCollection.add(mensaje);
   }
 }

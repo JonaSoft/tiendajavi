@@ -37,7 +37,11 @@ export class InicioComponent  {
     /*if (idx==="audífonos"){
       idx="audifonos"
     }*/
-    this._router.navigate(['productos', idx])
+    this._router.navigate(['productos', idx]);
+    //let elemento = document.getElementById('navegador');
+    setTimeout(() => {
+      scroll(0,0);
+    }, 200);
   }
   
   

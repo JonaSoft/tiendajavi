@@ -35,6 +35,10 @@ export class ItemComponent implements OnInit {
     console.log(producto);
     this._router.navigate(['/productos',producto])
     //this._router.navigateByUrl('/productos/'+producto)
+    //console.log('antes')
+  
     location.reload();
+  
+   
   }
 }

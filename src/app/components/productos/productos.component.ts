@@ -48,6 +48,9 @@ export class ProductosComponent implements OnInit {
     console.log(categoria)
     this.router.navigate(['/productos/'+categoria+'/item',item.img])
     this.mostrarItem=true;
+    setTimeout(() => {
+      scroll(0,0);
+    }, 200);
   }
 
 }

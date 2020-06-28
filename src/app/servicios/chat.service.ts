@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection,AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Mensaje } from '../interfaces/mensaje.interface';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
@@ -15,12 +19,19 @@ import { Router } from '@angular/router';
 export class ChatService {
 
   public itemsCollection: AngularFirestoreCollection<Mensaje>;
-
+  //
+  public clientes: Observable <Mensaje[]>;
+  //
   public chats:Mensaje[] =[];
   public usuario:any = {};
+  public uidBienvenida:string;
   constructor(private afs: AngularFirestore,
               public auth: AngularFireAuth,
               public router: Router) {
+
+                this.itemsCollection=afs.collection<Mensaje>('chats');
+                this.clientes=this.itemsCollection.valueChanges();
+
 
                 this.auth.authState.subscribe( user =>{
 
@@ -32,8 +43,33 @@ export class ChatService {
                     this.usuario.correo = user.email;
                     this.usuario.uid = user.uid
                 })
-               }
 
+    
+               }
+  
+  llamaUid(){
+    this.itemsCollection = this.afs.collection<Mensaje>('chats',ref => ref.orderBy('fecha','desc')
+                                                                          .limit(10));
+    this.bienvenida()
+    return this.clientes = this.itemsCollection.snapshotChanges()
+    .pipe(map( changes =>{
+        return changes.map( action =>{
+          const data  = action.payload.doc.data() as Mensaje;
+          //extraer el id del registro
+          data.uid = action.payload.doc.id;
+          //--------------------------------
+          console.log(data)
+
+          //this.chats = [];
+          //this.chats.unshift(data)
+          //return      
+          return data
+          //return console.log(data)
+        });
+    }))
+    //console.log(this.clientes)
+
+  }
   //desde login
   login(proveedor:string) {
     if(proveedor==="facebook"){
@@ -45,17 +81,26 @@ export class ChatService {
 
   }
   logout() {
-    this.usuario={}
-    this.auth.signOut();
+    this.itemsCollection.doc(this.uidBienvenida).delete().then(function() {
+      console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+    setTimeout(() => {
+      this.usuario={};
+      this.auth.signOut();
+     
+    }, 1000);
+    
   }
               
 
   cargarMensajes(){
     this.itemsCollection = this.afs.collection<Mensaje>('chats',ref => ref.orderBy('fecha','desc')
                                                                           .limit(10));
-    this.bienvenida()
+    this.bienvenida();
 
-    return this.itemsCollection.valueChanges().pipe(
+     return this.itemsCollection.valueChanges().pipe(
                 map( (mensajes: Mensaje[]) =>{
                   console.log(mensajes);
                   this.chats =[];
@@ -95,6 +140,10 @@ export class ChatService {
       correo:'latiendadejavi1@gmail.com',
       fecha: new Date().getTime()
     }
-    this.itemsCollection.add(mensaje);
+    this.itemsCollection.add(mensaje)
+    .then((docRef)=>{
+      console.log(docRef.id);
+      this.uidBienvenida = docRef.id
+    })
   }
 }

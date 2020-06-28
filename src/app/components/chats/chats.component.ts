@@ -30,7 +30,7 @@ export class ChatsComponent  {
                   this.elemento = document.getElementById('app-mensajes');
                   setTimeout(() => {
                     this.elemento.scrollTop = this.elemento.scrollHeight;  
-                  }, 20);
+                  }, 50);
                   
                 })
   }

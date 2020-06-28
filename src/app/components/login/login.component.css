@@ -15,7 +15,11 @@
     font-family: 'Arbutus', cursive;
   }
   button{
-    font-family: 'Carter One', cursive;
+    font-size:14px;
+  }
+  .comunidad{
+    font-size:2rem;
+    font-family:'Averia Gruesa Libre', cursive; 
   }
   .contacto{
       font-family: 'Arbutus', cursive;
